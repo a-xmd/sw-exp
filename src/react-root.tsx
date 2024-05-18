@@ -1,7 +1,16 @@
 import { createRoot } from "react-dom/client";
+import { StrictMode } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-console.log("hello?");
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world from react new version</div>,
+  },
+]);
 
-const container = document.getElementById("app");
-const root = createRoot(container);
-root.render(<div>hello from react</div>);
+createRoot(document.getElementById("app")).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>,
+);
