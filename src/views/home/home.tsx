@@ -27,7 +27,7 @@ export const Home = () => {
   }
 
   return (
-    <div>
+    <main className="mx-auto max-w-screen-md">
       <p>No cache found. Probably your first visit.</p>
       <p>
         Trying again in{' '}
@@ -38,6 +38,6 @@ export const Home = () => {
           }}
         />
       </p>
-    </div>
+    </main>
   )
 }

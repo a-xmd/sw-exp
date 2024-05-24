@@ -1,11 +1,12 @@
-import { NavLinkButton } from './nav-link-button'
+import { NavLink } from './nav-link'
 
 export const Header = () => {
   return (
-    <header className="m-4">
+    <header className="m-4 max-w-screen-md md:mx-auto">
       <nav className="flex gap-2">
-        <NavLinkButton to="/">home</NavLinkButton>
-        <NavLinkButton to="/about">about</NavLinkButton>
+        <NavLink to="/">home</NavLink>
+        <NavLink to="/sample">sample page</NavLink>
+        <NavLink to="/about">about</NavLink>
       </nav>
     </header>
   )

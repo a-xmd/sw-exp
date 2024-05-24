@@ -1,3 +1,5 @@
 export const About = () => {
-  return <div>just a second route/page</div>
+  return (
+    <main className="mx-auto max-w-screen-md">just a second route/page</main>
+  )
 }

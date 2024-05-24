@@ -7,7 +7,7 @@ interface CachesProps {
 
 export const Caches: FC<CachesProps> = ({ list }) => {
   return (
-    <div>
+    <main className="mx-auto max-w-screen-md">
       <h2 className="mb-2 text-lg font-bold">existing caches</h2>
       {Object.keys(list).map((key) => {
         return (
@@ -27,6 +27,6 @@ export const Caches: FC<CachesProps> = ({ list }) => {
           </div>
         )
       })}
-    </div>
+    </main>
   )
 }
