@@ -1,5 +1,3 @@
-export const Component = () => {
-  return <div>about view v2</div>
+export const About = () => {
+  return <div>just a second route/page</div>
 }
-
-Component.displayName = 'About'
