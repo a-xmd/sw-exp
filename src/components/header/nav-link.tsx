@@ -15,9 +15,12 @@ export const NavLink: FC<PropsWithChildren<NavLinkButtonProps>> = ({
     <OriginalNavLink
       to={to}
       className={({ isActive }) =>
-        cn('inline-block rounded border border-slate-900 p-2', {
-          'bg-slate-900 font-semibold text-white': isActive,
-        })
+        cn(
+          'inline-block border-b-4 border-transparent p-1 font-semibold hover:border-current',
+          {
+            'border-current': isActive,
+          },
+        )
       }
     >
       {children}
