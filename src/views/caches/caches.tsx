@@ -12,7 +12,9 @@ export const Caches = () => {
     for (const key of keys) {
       const cache = await caches.open(key)
       const files = await cache.keys()
-      setStoredCaches({ [key]: files.map((file) => file.url) })
+      setStoredCaches({
+        [key]: files.map((file) => new URL(file.url).pathname),
+      })
     }
   }, [])
 
