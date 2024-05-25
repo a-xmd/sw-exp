@@ -5,10 +5,10 @@ interface CachesProps {
   list: ServiceWorkerCache
 }
 
-export const Caches: FC<CachesProps> = ({ list }) => {
+export const CachesList: FC<CachesProps> = ({ list }) => {
   return (
     <main className="mx-auto max-w-screen-md">
-      <h2 className="mb-2 text-lg font-bold">existing caches</h2>
+      <h1 className="mb-8 text-2xl font-bold">Caches</h1>
       {Object.keys(list).map((key) => {
         return (
           <div key={key} className="font-semibold">

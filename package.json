@@ -5,7 +5,7 @@
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel",
-    "build": "rm -rf dist && parcel build",
+    "build": "rm -rf dist && parcel build && echo '' > dist/robots.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
