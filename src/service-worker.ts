@@ -2,7 +2,7 @@ import { manifest, version } from '@parcel/service-worker'
 
 async function install() {
   const cache = await caches.open(version)
-  await cache.addAll([...manifest, '/', '/about', '/sample'])
+  await cache.addAll([...manifest, '/', '/about', '/caches'])
 }
 
 self.addEventListener('install', async (event: ExtendableEvent) => {
