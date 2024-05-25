@@ -1,6 +1,6 @@
-// @ts-ignore @todo fix tsconfig asap
+// @ts-ignore @todo fix tsconfig
 const imageUrl1 = new URL('../../assets/cat1.jpg', import.meta.url)
-// @ts-ignore @todo fix tsconfig asap
+// @ts-ignore @todo fix tsconfig
 const imageUrl2 = new URL('../../assets/colombia1.jpg', import.meta.url)
 
 const Image = ({ src, alt }: { src: string; alt?: string }) => {
