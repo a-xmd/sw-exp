@@ -6,12 +6,17 @@
   "scripts": {
     "dev": "parcel",
     "build": "rm -rf dist && parcel build && echo '' > dist/robots.txt",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.3.0",
     "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.3.0",
     "http-server": "^14.1.1",
     "parcel": "^2.12.0",
     "postcss": "^8.4.38",
@@ -19,7 +24,8 @@
     "prettier-plugin-tailwindcss": "^0.5.14",
     "process": "^0.11.10",
     "sharp": "^0.31.3",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "typescript-eslint": "^7.10.0"
   },
   "dependencies": {
     "@parcel/service-worker": "^2.12.0",

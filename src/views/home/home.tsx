@@ -1,12 +1,12 @@
 const imageUrl1 = new URL(
   '../../assets/cat1.jpg?as=webp&width=800',
-  // @ts-ignore
+  // @ts-expect-error fix tsconfig
   import.meta.url,
 )
 
 const imageUrl2 = new URL(
   '../../assets/colombia1.jpg?as=webp&width=800',
-  // @ts-ignore
+  // @ts-expect-error fix tsconfig
   import.meta.url,
 )
 
