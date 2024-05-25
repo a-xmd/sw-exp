@@ -6,7 +6,7 @@ async function install() {
 }
 
 self.addEventListener('install', async (event: ExtendableEvent) => {
-  console.log('sw installed', { manifest, version })
+  console.log('sw installed v2', { manifest, version })
   event.waitUntil(install())
 })
 
