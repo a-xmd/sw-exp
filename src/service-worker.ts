@@ -37,8 +37,9 @@ async function cacheFirst(event: FetchEvent): Promise<Response> {
     // strip the params and fetch the image url from cache.
     // example image url with params:
     // http://localhost:1234/cat1.ad583342.jpg?1716632336849
-    if (event.request.url.includes('.jpg')) {
+    if (event.request.url.includes('.webp')) {
       const imageUrlWithoutParams = event.request.url.split('?')[0]
+      console.log({ imageUrlWithoutParams })
 
       const cachedImage = await cache.match(imageUrlWithoutParams)
       if (cachedImage) {
