@@ -1,3 +1,5 @@
+import { Image } from '../../components/image'
+
 const imageUrl1 = new URL(
   '../../assets/cat1.jpg?as=webp&width=800',
   // @ts-expect-error fix tsconfig
@@ -10,46 +12,29 @@ const imageUrl2 = new URL(
   import.meta.url,
 )
 
-const Image = ({ src, alt }: { src: string; alt?: string }) => {
-  return (
-    <div className=" inline-flex w-full rounded bg-slate-200">
-      <img src={src} alt={alt} className="aspect-4/3 w-full rounded" />
-    </div>
-  )
-}
-
-const Card = ({
-  image,
-  href,
-  title,
-}: {
-  image: { alt: string; src: string }
-  href: string
-  title: string
-}) => {
-  return (
-    <a href={href} className="group flex w-full flex-col gap-2">
-      <Image src={image.src} alt={image.alt} />
-      <div className="text-xl font-semibold group-hover:underline">{title}</div>
-    </a>
-  )
-}
-
 export const Home = () => {
   return (
     <main className="mx-auto max-w-screen-md">
       <h1 className="mb-8 text-2xl font-bold">Service Worker Experiment</h1>
-      <section className="flex gap-4">
-        <Card
-          image={{ src: imageUrl1.href, alt: 'alt for #1' }}
-          href="#1"
-          title="Link #1"
-        />
-        <Card
-          image={{ src: imageUrl2.href, alt: 'alt for #2' }}
-          href="#2"
-          title="Link #2"
-        />
+      <section className="mb-12">
+        <h2 className="mb-4 text-xl font-bold">Cached images</h2>
+        <div className="flex gap-4">
+          <Image
+            image={{ src: imageUrl1.href, alt: 'alt for #1' }}
+            href="#1"
+            title="caption #1"
+          />
+          <Image
+            image={{ src: imageUrl2.href, alt: 'alt for #2' }}
+            href="#2"
+            title="caption #2"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2 className="mb-4 text-xl font-bold">Intercepting fetch requests</h2>
+        <div>test</div>
       </section>
     </main>
   )
