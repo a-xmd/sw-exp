@@ -28,6 +28,17 @@ async function cacheFirst(event: FetchEvent): Promise<Response> {
     return cachedResponse
   }
 
+  if (event.request.url === 'https://jsonplaceholder.typicode.com/todos/1') {
+    if (event.request.headers.get('x-intercept-fetch') === 'true') {
+      return new Response(
+        JSON.stringify({ fromServiceWorker: true }, null, 2),
+        {
+          headers: { 'content-type': 'application/json' },
+        },
+      )
+    }
+  }
+
   try {
     const response = await fetch(event.request)
     return response
