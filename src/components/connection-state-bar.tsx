@@ -23,7 +23,7 @@ export const ConnectionStateBar = () => {
 
   return (
     <div
-      className={cn('flex justify-center border-b ', {
+      className={cn('sticky top-0 flex justify-center border-b ', {
         'bg-green-300 text-green-900': isOnline,
         'bg-red-300 text-red-900': !isOnline,
       })}
